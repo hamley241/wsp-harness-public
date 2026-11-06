@@ -1,0 +1,70 @@
+{
+ "main": [
+  1,
+  2,
+  3,
+  4,
+  6,
+  7,
+  10,
+  12,
+  14,
+  15,
+  16,
+  18,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  28
+ ],
+ "extension": [
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38
+ ],
+ "ineligible": [
+  {
+   "seed": 5,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 8,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 9,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 11,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 13,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 17,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 19,
+   "reason": "initial_unique"
+  },
+  {
+   "seed": 27,
+   "reason": "initial_unique"
+  }
+ ]
+}

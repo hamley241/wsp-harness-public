@@ -1,0 +1,1 @@
+FROZEN: k=6 n_initial=32 D0_heldout=0.888

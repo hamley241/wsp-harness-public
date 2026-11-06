@@ -1,0 +1,520 @@
+{
+ "roster": {
+  "main": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   10,
+   12,
+   14,
+   15,
+   16,
+   18,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   28
+  ],
+  "extension": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38
+  ],
+  "ineligible": [
+   {
+    "seed": 5,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 8,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 9,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 11,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 13,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 17,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 19,
+    "reason": "initial_unique"
+   },
+   {
+    "seed": 27,
+    "reason": "initial_unique"
+   }
+  ]
+ },
+ "roster_check": {
+  "main_missing": [],
+  "main_unrostered": [],
+  "extension_missing": [],
+  "extension_unrostered": []
+ },
+ "main": [
+  {
+   "seed": 1,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 2,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 3,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": 64,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 4,
+   "informative": true,
+   "winner": "A",
+   "reason": null,
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 64,
+   "status_B": "unique"
+  },
+  {
+   "seed": 6,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": 64,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 7,
+   "informative": true,
+   "winner": "A",
+   "reason": null,
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 96,
+   "status_B": "unique"
+  },
+  {
+   "seed": 10,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 12,
+   "informative": false,
+   "winner": null,
+   "reason": "both_censored",
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 14,
+   "informative": false,
+   "winner": null,
+   "reason": "both_censored",
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 15,
+   "informative": false,
+   "winner": null,
+   "reason": "both_censored",
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 16,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 18,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": 64,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 20,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 21,
+   "informative": true,
+   "winner": "A",
+   "reason": null,
+   "event_A": 96,
+   "status_A": "unique",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 22,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 64,
+   "status_A": "unique",
+   "event_B": 64,
+   "status_B": "unique"
+  },
+  {
+   "seed": 23,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 64,
+   "status_A": "unique",
+   "event_B": 64,
+   "status_B": "unique"
+  },
+  {
+   "seed": 24,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 25,
+   "informative": true,
+   "winner": "A",
+   "reason": null,
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 64,
+   "status_B": "unique"
+  },
+  {
+   "seed": 26,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 28,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": 32,
+   "status_B": "unique"
+  }
+ ],
+ "extension": [
+  {
+   "seed": 29,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": 64,
+   "status_B": "unique"
+  },
+  {
+   "seed": 30,
+   "informative": false,
+   "winner": null,
+   "reason": "both_censored",
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 31,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 32,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 33,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 34,
+   "informative": false,
+   "winner": null,
+   "reason": "both_censored",
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 35,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": 64,
+   "status_B": "unique"
+  },
+  {
+   "seed": 36,
+   "informative": true,
+   "winner": "A",
+   "reason": null,
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": "censored",
+   "status_B": "censored"
+  },
+  {
+   "seed": 37,
+   "informative": false,
+   "winner": null,
+   "reason": "equal",
+   "event_A": 32,
+   "status_A": "unique",
+   "event_B": 32,
+   "status_B": "unique"
+  },
+  {
+   "seed": 38,
+   "informative": true,
+   "winner": "B",
+   "reason": null,
+   "event_A": "censored",
+   "status_A": "censored",
+   "event_B": 32,
+   "status_B": "unique"
+  }
+ ],
+ "decision": {
+  "n_pairs": 30,
+  "n_informative": 12,
+  "wins_A": 5,
+  "wins_B": 7,
+  "p": 0.80615234375,
+  "alpha": 0.05,
+  "margin_ok": false,
+  "rejected": false,
+  "outcome": "underpowered_no_result",
+  "stopped_at_cap": false,
+  "main_done": true,
+  "extension_done": true,
+  "needs_extension": false
+ },
+ "reliability": {
+  "ineligible": {
+   "initial_unique": 8
+  },
+  "refusals": 0,
+  "errors": 0,
+  "attempts": 122,
+  "fallback_random_rounds": 0,
+  "filled_strings": 0,
+  "standin_timeouts": 0,
+  "endpoint_timeouts": 0,
+  "indeterminate_arms": 0,
+  "failed_arms": 0,
+  "reruns": 0,
+  "arms": 70,
+  "rounds": 122,
+  "usage": {
+   "prompt_tokens": 98691,
+   "completion_tokens": 160427,
+   "usd": 3.6033039999999996,
+   "entries": 40,
+   "aborted": 0
+  },
+  "stopped_at_cap": null
+ },
+ "spend": {
+  "prompt_tokens": 98691,
+  "completion_tokens": 160427,
+  "usd": 3.6033039999999996,
+  "entries": 40,
+  "aborted": 0
+ },
+ "sensitivity": {
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ],
+  "d_inv": 1,
+  "d_rep": 1,
+  "inconclusive": false,
+  "tiebreak_sensitive": false,
+  "bars_adversary_arm": false,
+  "rows": [
+   {
+    "seed": 1,
+    "status_main": "unique",
+    "event_main": 32,
+    "status_replicate": "unique",
+    "event_replicate": 32,
+    "status_inverted": "unique",
+    "event_inverted": 32,
+    "discordant_inverted": false,
+    "discordant_replicate": false
+   },
+   {
+    "seed": 2,
+    "status_main": "unique",
+    "event_main": 32,
+    "status_replicate": "unique",
+    "event_replicate": 32,
+    "status_inverted": "unique",
+    "event_inverted": 32,
+    "discordant_inverted": false,
+    "discordant_replicate": false
+   },
+   {
+    "seed": 3,
+    "status_main": "unique",
+    "event_main": 64,
+    "status_replicate": "unique",
+    "event_replicate": 32,
+    "status_inverted": "unique",
+    "event_inverted": 64,
+    "discordant_inverted": false,
+    "discordant_replicate": true
+   },
+   {
+    "seed": 4,
+    "status_main": "unique",
+    "event_main": 32,
+    "status_replicate": "unique",
+    "event_replicate": 32,
+    "status_inverted": "unique",
+    "event_inverted": 96,
+    "discordant_inverted": true,
+    "discordant_replicate": false
+   },
+   {
+    "seed": 6,
+    "status_main": "unique",
+    "event_main": 64,
+    "status_replicate": "unique",
+    "event_replicate": 64,
+    "status_inverted": "unique",
+    "event_inverted": 64,
+    "discordant_inverted": false,
+    "discordant_replicate": false
+   }
+  ]
+ },
+ "study_meta": {
+  "git_commit": "b8f63d823f0badf0199a44b8195063bbe34fc88e",
+  "python_sat_version": "1.9.dev20",
+  "config": {
+   "roster": "sensitivity-inverted",
+   "n_main": 20,
+   "n_ext": 10,
+   "k": 6,
+   "n_initial": 32,
+   "rounds": 3,
+   "n_candidates": 32,
+   "backend": "openrouter",
+   "model": "anthropic/claude-opus-5.5",
+   "reasoning_tokens": 16000,
+   "max_output_tokens": 32000,
+   "sat_timeout": 30.0,
+   "spend_cap_usd": 10.0
+  },
+  "written": "2026-11-05T04:58:20.592849+00:00"
+ }
+}

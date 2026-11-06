@@ -1,0 +1,20 @@
+[
+ {
+  "attempt": 1,
+  "src_lines": 0,
+  "literal_matches": 0,
+  "finish_reason": "content_filter",
+  "outcome": "refusal",
+  "reason": "OpenRouter refusal (finish_reason=content_filter, native_finish_reason=refusal): This request triggered restrictions on violative cyber content and was blocked under Anthropic's Usage Policy. To learn more, see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback.",
+  "elapsed_s": 33.69118275004439
+ },
+ {
+  "attempt": 2,
+  "src_lines": 143,
+  "literal_matches": 32,
+  "finish_reason": null,
+  "outcome": "ok",
+  "reason": "",
+  "elapsed_s": 210.41366366599686
+ }
+]

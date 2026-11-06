@@ -1,0 +1,81 @@
+{
+ "round": 3,
+ "queried": [],
+ "labels": [],
+ "counterexamples": [],
+ "n_filled_random": 0,
+ "failed": false,
+ "editor_attempts": [
+  {
+   "attempt": 1,
+   "src_lines": 304,
+   "literal_matches": 32,
+   "finish_reason": null,
+   "outcome": "audit",
+   "reason": "line cap exceeded: 304 > 300",
+   "elapsed_s": 93.8244719170034
+  },
+  {
+   "attempt": 2,
+   "src_lines": 208,
+   "literal_matches": 32,
+   "finish_reason": null,
+   "outcome": "ok",
+   "reason": "",
+   "elapsed_s": 27.958499667001888
+  }
+ ],
+ "n_attempts": 2,
+ "final_outcome": "ok",
+ "n_queried": 0,
+ "constructor_src": "import numpy as np\n\ndef build_weights() -> dict[str, np.ndarray]:\n    data = [\n        (\"1\", 1), (\"0\", 0), (\"00\", 1), (\"10\", 0),\n        (\"111\", 1), (\"000\", 0), (\"0101\", 1), (\"1010\", 0),\n        (\"10000\", 1), (\"01101\", 1), (\"01010\", 0),\n        (\"110000\", 1), (\"110010\", 0), (\"011100\", 0),\n        (\"1111010\", 1), (\"1111101\", 1), (\"0111010\", 0),\n        (\"01100101\", 1), (\"11010010\", 0), (\"01000110\", 0),\n        (\"111110111\", 1), (\"110110101\", 1), (\"111010111\", 0),\n        (\"1011110111\", 1), (\"0101100110\", 0),\n        (\"1000100011\", 0), (\"10100001101\", 1),\n        (\"01011000101\", 1), (\"00001010010\", 0),\n        (\"100011110111\", 1), (\"011011111110\", 0),\n        (\"000000000111\", 0),\n    ]\n\n    # Intern suffixes so equal future requirements share the same key.\n    suffix_ids = {\"\": 0}\n    first, rest, lengths = [-1], [-1], [0]\n\n    def intern(s):\n        if s not in suffix_ids:\n            tail = intern(s[1:])\n            suffix_ids[s] = len(first)\n            first.append(int(s[0]))\n            rest.append(tail)\n            lengths.append(len(s))\n        return suffix_ids[s]\n\n    samples = [(intern(s), y) for s, y in data]\n    samples.sort(key=lambda item: lengths[item[0]])\n    ns = len(first)\n\n    def infer(n, budget, limit=512):\n        transitions = [-1] * (2 * n)\n        solutions, seen = [], set()\n        nodes = 0\n\n        def visit(used):\n            nonlocal nodes\n            if nodes >= budget or len(solutions) >= limit:\n                return\n            nodes += 1\n            requirements, blocked = {}, {}\n\n            for suffix, label in samples:\n                state = 0\n                while True:\n                    key = state * ns + suffix\n                    old = requirements.get(key)\n                    if old is not None:\n                        if old != label:\n                            return\n                        break\n                    requirements[key] = label\n                    if suffix == 0:\n                        break\n                    edge = 2 * state + first[suffix]\n                    target = transitions[edge]\n                    if target < 0:\n                        blocked.setdefault(edge, []).append(\n                            (rest[suffix], label)\n                        )\n                        break\n                    state, suffix = target, rest[suffix]\n\n            if not blocked:\n                table = tuple(max(0, t) for t in transitions[:2 * used])\n                labels = tuple(\n                    requirements.get(state * ns, 0)\n                    for state in range(used)\n                )\n                signature = (table, labels)\n                if signature not in seen:\n                    seen.add(signature)\n                    solutions.append(signature)\n                return\n\n            edge = min(\n                blocked,\n                key=lambda e: (\n                    min(lengths[s] for s, _ in blocked[e]),\n                    -len(blocked[e]),\n                    e,\n                ),\n            )\n            choices = []\n            for target in range(used + int(used < n)):\n                local, score, compatible = {}, 0, True\n                for suffix, label in blocked[edge]:\n                    state = target\n                    while True:\n                        key = state * ns + suffix\n                        old = requirements.get(key)\n                        if old is not None:\n                            if old != label:\n                                compatible = False\n                            else:\n                                score += 1\n                            break\n                        old = local.get(key)\n                        if old is not None:\n                            if old != label:\n                                compatible = False\n                            break\n                        local[key] = label\n                        if suffix == 0:\n                            break\n                        nxt = transitions[2 * state + first[suffix]]\n                        if nxt < 0:\n                            break\n                        state, suffix = nxt, rest[suffix]\n                    if not compatible:\n                        break\n                if compatible:\n                    choices.append((-score, target == used, target))\n\n            choices.sort()\n            for _, _, target in choices:\n                transitions[edge] = target\n                visit(max(used, target + 1))\n                transitions[edge] = -1\n                if nodes >= budget or len(solutions) >= limit:\n                    break\n\n        visit(1)\n        return solutions\n\n    candidates = []\n    for n in range(2, 9):\n        candidates = infer(n, 1000000 if n <= 4 else 2000000)\n        if candidates:\n            break\n    if not candidates:\n        candidates = infer(8, 8000000, limit=1)\n    if not candidates:\n        raise RuntimeError(\"No consistent DFA found\")\n\n    smallest = min(len(labels) for _, labels in candidates)\n    candidates = [\n        item for item in candidates if len(item[1]) == smallest\n    ]\n\n    # Select a minimum-state explanation closest to ensemble consensus.\n    # Include exhaustive short strings and independently sampled long ones.\n    rng = np.random.default_rng(173)\n    probes = rng.integers(0, 2, size=(1024, 96))\n    predictions = []\n    for flat, outputs in candidates:\n        table = np.asarray(flat, dtype=np.int64).reshape(-1, 2)\n        labels = np.asarray(outputs, dtype=np.int64)\n        states = np.zeros(1, dtype=np.int64)\n        parts = []\n        for _ in range(10):\n            states = table[states].reshape(-1)\n            parts.append(labels[states])\n        states = np.zeros(len(probes), dtype=np.int64)\n        for t in range(probes.shape[1]):\n            states = table[states, probes[:, t]]\n            if t in (11, 23, 47, 95):\n                parts.append(labels[states])\n        predictions.append(np.concatenate(parts))\n\n    predictions = np.asarray(predictions, dtype=np.float64)\n    consensus = predictions.mean(axis=0)\n    distances = np.abs(predictions - consensus).mean(axis=1)\n    flat, outputs = candidates[int(np.argmin(distances))]\n    table = np.asarray(flat, dtype=np.int64).reshape(-1, 2)\n    labels = np.asarray(outputs, dtype=np.int64)\n\n    # Compile the DFA into saturated bipolar (state, last-symbol) units.\n    # The uniform correction also makes the all-zero initial vector encode\n    # the initial DFA state correctly, without a separate initialization step.\n    h, n, scale = 16, len(labels), 24.0\n    width = 2 * n\n    code_sum = 2.0 - width\n    Wx = np.zeros((2, h), dtype=np.float64)\n    Wh = np.zeros((h, h), dtype=np.float64)\n    bh = np.zeros(h, dtype=np.float64)\n    w = np.zeros(h, dtype=np.float64)\n\n    for target in range(n):\n        for bit in range(2):\n            row = 2 * target + bit\n            predecessors = np.flatnonzero(table[:, bit] == target)\n            initial = float(table[0, bit] == target)\n            correction = (len(predecessors) - initial) / code_sum\n            Wh[row, :width] = scale * correction\n            for source in predecessors:\n                Wh[row, 2 * source:2 * source + 2] += 0.5 * scale\n            bh[row] = scale * (initial - 0.5)\n            Wx[1 - bit, row] = -2.0 * scale\n\n    c_value = 1.0 if labels[0] else -1.0\n    correction = (2.0 * labels.sum() - 1.0 - c_value) / code_sum\n    w[:width] = np.repeat(labels, 2).astype(np.float64) + correction\n    c = np.array(c_value, dtype=np.float64)\n\n    for string, expected in data:\n        state = np.zeros(h, dtype=np.float64)\n        for symbol in string:\n            state = np.tanh(Wx[int(symbol)] + Wh @ state + bh)\n        if int(w @ state + c > 0.0) != expected:\n            raise RuntimeError(\"DFA compilation failed validation\")\n\n    return {\"Wx\": Wx, \"Wh\": Wh, \"bh\": bh, \"w\": w, \"c\": c}\n",
+ "accepted": true,
+ "audit": {
+  "ok": true,
+  "reasons": [],
+  "literal_matches": [
+   "0",
+   "00",
+   "000",
+   "000000000111",
+   "00001010010",
+   "01000110",
+   "0101",
+   "01010",
+   "01011000101",
+   "0101100110",
+   "01100101",
+   "01101",
+   "011011111110",
+   "011100",
+   "0111010",
+   "1",
+   "10",
+   "10000",
+   "1000100011",
+   "100011110111",
+   "1010",
+   "10100001101",
+   "1011110111",
+   "110000",
+   "110010",
+   "11010010",
+   "110110101",
+   "111",
+   "111010111",
+   "1111010",
+   "1111101",
+   "111110111"
+  ],
+  "literal_match_fraction": 1.0
+ },
+ "sandbox": {
+  "ok": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 0.23882333294022828,
+  "confined": true,
+  "stderr": "[sandbox] could not set RLIMIT_AS: current limit exceeds maximum limit\n"
+ },
+ "weights_path": "D/round_3/weights.npz"
+}

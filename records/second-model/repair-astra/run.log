@@ -1,0 +1,12 @@
+wsp.repair_study: wrote runs/repair-study-astra/seed_1.json status=ok failure=None
+wsp.repair_study: wrote runs/repair-study-astra/seed_15.json status=ok failure=None
+wsp.repair_study: wrote runs/repair-study-astra/seed_20.json status=ok failure=None
+wsp.repair_study: wrote runs/repair-study-astra/seed_21.json status=ok failure=None
+wsp.repair_study: wrote runs/repair-study-astra/seed_24.json status=failed failure=BudgetStop: spend cap 18.0 reached: spent 17.0998 USD
+wsp.repair_study: stopped at cap on seed 24
+wsp.repair_study: resuming at commit d76c38ea39d0eedc59a68614d0f0bd2b1fca1c6f, study written at 144406f95715752cdbef91bc6f7fd9ffb13e4909
+wsp.repair_study: runs/repair-study-astra/seed_1.json exists, skipping
+wsp.repair_study: runs/repair-study-astra/seed_15.json exists, skipping
+wsp.repair_study: runs/repair-study-astra/seed_20.json exists, skipping
+wsp.repair_study: runs/repair-study-astra/seed_21.json exists, skipping
+wsp.repair_study: wrote runs/repair-study-astra/seed_24.json status=ok failure=None

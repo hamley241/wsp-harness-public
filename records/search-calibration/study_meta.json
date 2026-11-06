@@ -1,0 +1,18 @@
+{
+ "rule": "rules/search-calibration-rule.md",
+ "git_commit": "7ebf9c09fb1fcad6eceb464b6c35db79b2d08014",
+ "config": {
+  "seeds": "4,6,25,28",
+  "optimisers": "rs-random24,rs-probe24,es-dense",
+  "budgets": "100,1000,10000",
+  "replicates": 3,
+  "k": 6,
+  "hidden": 16,
+  "n_initial": 32,
+  "n_heldout": 500,
+  "n_long": 200,
+  "train_steps": 2000,
+  "jobs": 4
+ },
+ "written": "2026-11-05T16:46:31.942554+00:00"
+}

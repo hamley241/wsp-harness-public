@@ -1,0 +1,72 @@
+{
+ "round": 3,
+ "queried": [],
+ "labels": [],
+ "counterexamples": [],
+ "n_filled_random": 0,
+ "failed": false,
+ "editor_attempts": [
+  {
+   "attempt": 1,
+   "src_lines": 212,
+   "literal_matches": 32,
+   "finish_reason": null,
+   "outcome": "ok",
+   "reason": "",
+   "elapsed_s": 80.87508991605137
+  }
+ ],
+ "n_attempts": 1,
+ "final_outcome": "ok",
+ "n_queried": 0,
+ "constructor_src": "import numpy as np\n\nDATA = \"\"\"1\t1\n0\t0\n00\t1\n10\t0\n111\t1\n000\t0\n0101\t1\n1010\t0\n10000\t1\n01101\t1\n01010\t0\n110000\t1\n110010\t0\n011100\t0\n1111010\t1\n1111101\t1\n0111010\t0\n01100101\t1\n11010010\t0\n01000110\t0\n111110111\t1\n110110101\t1\n111010111\t0\n1011110111\t1\n0101100110\t0\n1000100011\t0\n10100001101\t1\n01011000101\t1\n00001010010\t0\n100011110111\t1\n011011111110\t0\n000000000111\t0\"\"\"\n\n\ndef _parse():\n    out = []\n    for line in DATA.strip().split(\"\\n\"):\n        s, l = line.split(\"\\t\")\n        out.append((s.strip(), int(l)))\n    return out\n\n\ndef _trie(data):\n    children = [dict()]\n    parent = [-1]\n    sym = [-1]\n    label = [None]\n    for s, lab in data:\n        v = 0\n        for ch in s:\n            a = int(ch)\n            if a not in children[v]:\n                children.append(dict())\n                parent.append(v)\n                sym.append(a)\n                label.append(None)\n                children[v][a] = len(children) - 1\n            v = children[v][a]\n        label[v] = lab\n    order = []\n    queue = [0]\n    while queue:\n        nq = []\n        for v in queue:\n            order.append(v)\n            for a in (0, 1):\n                if a in children[v]:\n                    nq.append(children[v][a])\n        queue = nq\n    return parent, sym, label, order\n\n\ndef _find_dfa(tr, n, limit=3000000):\n    parent, sym, label, order = tr\n    M = len(order)\n    assign = [-1] * len(parent)\n    assign[0] = 0\n    delta = {}\n    slab = [None] * n\n    scnt = [0] * n\n    steps = [0]\n    if label[0] is not None:\n        slab[0] = label[0]\n        scnt[0] = 1\n\n    def setlab(q, lab):\n        if lab is None:\n            return True\n        if slab[q] is None:\n            slab[q] = lab\n            scnt[q] = 1\n            return True\n        if slab[q] != lab:\n            return False\n        scnt[q] += 1\n        return True\n\n    def unsetlab(q, lab):\n        if lab is None:\n            return\n        scnt[q] -= 1\n        if scnt[q] == 0:\n            slab[q] = None\n\n    def rec(idx, k):\n        steps[0] += 1\n        if steps[0] > limit:\n            return None\n        if idx == M:\n            return k\n        v = order[idx]\n        if v == 0:\n            return rec(idx + 1, k)\n        q = assign[parent[v]]\n        a = sym[v]\n        key = (q, a)\n        if key in delta:\n            t = delta[key]\n            if not setlab(t, label[v]):\n                return None\n            assign[v] = t\n            r = rec(idx + 1, k)\n            if r is not None:\n                return r\n            assign[v] = -1\n            unsetlab(t, label[v])\n            return None\n        for t in range(min(k + 1, n)):\n            if not setlab(t, label[v]):\n                continue\n            delta[key] = t\n            assign[v] = t\n            r = rec(idx + 1, max(k, t + 1))\n            if r is not None:\n                return r\n            assign[v] = -1\n            del delta[key]\n            unsetlab(t, label[v])\n            if steps[0] > limit:\n                return None\n        return None\n\n    k = rec(0, 1)\n    if k is None:\n        return None\n    labels = {q: slab[q] for q in range(n) if slab[q] is not None}\n    return dict(delta), labels, k\n\n\ndef build_weights():\n    h = 16\n    data = _parse()\n    tr = _trie(data)\n    res = None\n    for n in range(1, 8):\n        res = _find_dfa(tr, n)\n        if res is not None:\n            break\n    if res is None:\n        n = 1\n        delta, labels, k = {}, {0: 0}, 1\n    else:\n        delta, labels, k = res\n        n = k\n    trans = [[0, 0] for _ in range(n)]\n    for i in range(n):\n        for a in range(2):\n            t = delta.get((i, a), i)\n            trans[i][a] = t if t < n else i\n    acc = [labels.get(i, 0) for i in range(n)]\n\n    K = 4.0\n    N = 2 * n\n    s_idx = N\n    Wx = np.zeros((2, h))\n    Wh = np.zeros((h, h))\n    bh = np.zeros(h)\n    w = np.zeros(h)\n\n    for j in range(n):\n        for a in range(2):\n            u = 2 * j + a\n            P = set()\n            for i in range(n):\n                if trans[i][a] == j:\n                    P.add(2 * i)\n                    P.add(2 * i + 1)\n            for v in range(N):\n                Wh[u, v] = K if v in P else -K\n            e = 2 * K if trans[0][a] == j else -2 * K\n            bh[u] = -2 * K + e\n            Wh[u, s_idx] = K * (N - 2 * len(P)) + e\n            Wx[a, u] = 2 * K\n            Wx[1 - a, u] = -2 * K\n    bh[s_idx] = -20.0\n\n    Fu = 0\n    for j in range(n):\n        for a in range(2):\n            u = 2 * j + a\n            if acc[j] == 1:\n                w[u] = 1.0\n                Fu += 1\n            else:\n                w[u] = -1.0\n    c0 = 1.0 if acc[0] == 1 else -1.0\n    w[s_idx] = c0 + N - 2 * Fu\n    c = np.array(c0)\n\n    return {\"Wx\": Wx, \"Wh\": Wh, \"bh\": bh, \"w\": w, \"c\": c}\n",
+ "accepted": true,
+ "audit": {
+  "ok": true,
+  "reasons": [],
+  "literal_matches": [
+   "0",
+   "00",
+   "000",
+   "000000000111",
+   "00001010010",
+   "01000110",
+   "0101",
+   "01010",
+   "01011000101",
+   "0101100110",
+   "01100101",
+   "01101",
+   "011011111110",
+   "011100",
+   "0111010",
+   "1",
+   "10",
+   "10000",
+   "1000100011",
+   "100011110111",
+   "1010",
+   "10100001101",
+   "1011110111",
+   "110000",
+   "110010",
+   "11010010",
+   "110110101",
+   "111",
+   "111010111",
+   "1111010",
+   "1111101",
+   "111110111"
+  ],
+  "literal_match_fraction": 1.0
+ },
+ "sandbox": {
+  "ok": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 2.642435541958548,
+  "confined": true,
+  "stderr": "[sandbox] could not set RLIMIT_AS: current limit exceeds maximum limit\n"
+ },
+ "weights_path": "D/round_3/weights.npz"
+}

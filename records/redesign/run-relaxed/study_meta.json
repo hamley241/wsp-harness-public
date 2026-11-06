@@ -1,0 +1,26 @@
+{
+ "git_commit": "41f43a1d3fb00ec7d3bfd5e93891e36a04b2a423",
+ "config": {
+  "seeds": "1,15,20,21,24",
+  "production": false,
+  "backend": "openrouter",
+  "model": "anthropic/claude-opus-5.5",
+  "reasoning_tokens": 16000,
+  "max_output_tokens": 24000,
+  "k": 6,
+  "hidden": 16,
+  "n_initial": 32,
+  "rounds": 3,
+  "n_candidates": 32,
+  "n_heldout": 500,
+  "n_long": 200,
+  "train_steps": 2000,
+  "fence": "relaxed",
+  "per_round": 24,
+  "distinct": 48,
+  "max_norm": 1.0,
+  "spend_cap_usd": 10.0
+ },
+ "written": "2026-11-05T08:28:14.367022+00:00",
+ "resumes": []
+}

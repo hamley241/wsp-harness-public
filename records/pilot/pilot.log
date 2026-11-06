@@ -1,0 +1,16 @@
+=== calibration n_initial=32 start 20:13:41Z
+exit=0 end 20:18:22Z
+n_initial=32 D0_heldout=0.888
+FROZEN: k=6 n_initial=32 D0_heldout=0.888
+=== full run start 20:18:22Z
+exit=0 end 20:27:50Z
+A
+B
+D
+d0.npz
+d0_constructor.py
+parity_calls.json
+parity_constructor.py
+results.json
+results.md
+pilot exit=0

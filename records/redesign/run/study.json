@@ -1,0 +1,1209 @@
+{
+ "outcome": {
+  "f": 0.0224,
+  "n_seeds": 5,
+  "min_analyzable": 4,
+  "n_analyzable": 5,
+  "failed": [],
+  "seeds": [
+   {
+    "seed": 15,
+    "status": "ok",
+    "D0": 0.738,
+    "E1": 0.78,
+    "E2": 0.828,
+    "G": 0.856,
+    "N": 0.738,
+    "gE": 0.06600000000000006,
+    "gG": 0.118,
+    "d": -0.051999999999999935
+   },
+   {
+    "seed": 20,
+    "status": "ok",
+    "D0": 0.75,
+    "E1": 0.756,
+    "E2": 0.76,
+    "G": 0.784,
+    "N": 0.75,
+    "gE": 0.008000000000000007,
+    "gG": 0.03400000000000003,
+    "d": -0.026000000000000023
+   },
+   {
+    "seed": 21,
+    "status": "ok",
+    "D0": 0.728,
+    "E1": 0.728,
+    "E2": 0.728,
+    "G": 0.78,
+    "N": 0.728,
+    "gE": 0.0,
+    "gG": 0.052000000000000046,
+    "d": -0.052000000000000046
+   },
+   {
+    "seed": 24,
+    "status": "ok",
+    "D0": 0.722,
+    "E1": 0.736,
+    "E2": 0.722,
+    "G": 0.766,
+    "N": 0.722,
+    "gE": 0.007000000000000006,
+    "gG": 0.04400000000000004,
+    "d": -0.03700000000000003
+   },
+   {
+    "seed": 30,
+    "status": "ok",
+    "D0": 0.608,
+    "E1": 0.608,
+    "E2": 0.602,
+    "G": 0.652,
+    "N": 0.608,
+    "gE": -0.0030000000000000027,
+    "gG": 0.04400000000000004,
+    "d": -0.04700000000000004
+   }
+  ],
+  "counts": {
+   "gE_at_most_f": 4,
+   "d_above_f": 0,
+   "d_below_minus_f": 5,
+   "abs_d_at_most_f": 0
+  },
+  "outcome": "no_repair"
+ },
+ "seeds": [
+  {
+   "seed": 15,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 20,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 21,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 24,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 30,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  }
+ ],
+ "rounds": [
+  {
+   "seed": 15,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 2,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 0,
+    "E2_G": 1,
+    "E1_E2": 0
+   }
+  },
+  {
+   "seed": 15,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 3,
+    "E2": 11,
+    "G": 37
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 5,
+    "E1_E2": 2
+   }
+  },
+  {
+   "seed": 15,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 3,
+    "E2": 11,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 2,
+    "E2_G": 7,
+    "E1_E2": 2
+   }
+  },
+  {
+   "seed": 20,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 0,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 20,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 39
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 20,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 21,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 21,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 34
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 21,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 24,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 0,
+    "E2_G": 1,
+    "E1_E2": 0
+   }
+  },
+  {
+   "seed": 24,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 2,
+    "E2": 1,
+    "G": 36
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 24,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 6,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 5,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 30,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 0,
+    "E2": 4,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 0,
+    "E2_G": 1,
+    "E1_E2": 0
+   }
+  },
+  {
+   "seed": 30,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 4,
+    "G": 38
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 3,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 30,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 6,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 5,
+    "E1_E2": 1
+   }
+  }
+ ],
+ "blocks_touched": {
+  "E1": {
+   "1": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 0,
+    "c": 2
+   },
+   "2": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 0,
+    "c": 5
+   },
+   "3": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 1,
+    "c": 5
+   }
+  },
+  "E2": {
+   "1": {
+    "n_available": 5,
+    "Wx": 0,
+    "Wh": 0,
+    "bh": 1,
+    "w": 1,
+    "c": 5
+   },
+   "2": {
+    "n_available": 5,
+    "Wx": 1,
+    "Wh": 0,
+    "bh": 1,
+    "w": 2,
+    "c": 5
+   },
+   "3": {
+    "n_available": 5,
+    "Wx": 1,
+    "Wh": 0,
+    "bh": 1,
+    "w": 2,
+    "c": 5
+   }
+  },
+  "G": {
+   "1": {
+    "n_available": 5,
+    "Wx": 4,
+    "Wh": 5,
+    "bh": 1,
+    "w": 5,
+    "c": 5
+   },
+   "2": {
+    "n_available": 5,
+    "Wx": 5,
+    "Wh": 5,
+    "bh": 1,
+    "w": 5,
+    "c": 5
+   },
+   "3": {
+    "n_available": 5,
+    "Wx": 5,
+    "Wh": 5,
+    "bh": 2,
+    "w": 5,
+    "c": 5
+   }
+  }
+ },
+ "editor": {
+  "E1": {
+   "rounds": 15,
+   "noop_rounds": 0,
+   "readout_only_rounds": 12,
+   "attempts": 32,
+   "ok": 15,
+   "refusal": 0,
+   "llm_error": 1,
+   "client_error": 0,
+   "parse": 16,
+   "budget": 0,
+   "failures": [
+    {
+     "seed": 15,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "llm_error",
+     "finish_reason": "length",
+     "reason": "OpenRouter returned no content (finish_reason=length)"
+    },
+    {
+     "seed": 15,
+     "round": 1,
+     "attempt": 2,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 15,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 15,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 20,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 20,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 20,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 21,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 21,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 21,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 24,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 24,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 24,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 1,
+     "attempt": 2,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    }
+   ]
+  },
+  "E2": {
+   "rounds": 15,
+   "noop_rounds": 1,
+   "readout_only_rounds": 12,
+   "attempts": 32,
+   "ok": 14,
+   "refusal": 0,
+   "llm_error": 2,
+   "client_error": 0,
+   "parse": 16,
+   "budget": 0,
+   "failures": [
+    {
+     "seed": 15,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 15,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 15,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "llm_error",
+     "finish_reason": "length",
+     "reason": "OpenRouter returned no content (finish_reason=length)"
+    },
+    {
+     "seed": 15,
+     "round": 3,
+     "attempt": 2,
+     "outcome": "llm_error",
+     "finish_reason": "length",
+     "reason": "OpenRouter returned no content (finish_reason=length)"
+    },
+    {
+     "seed": 15,
+     "round": 3,
+     "attempt": 3,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 20,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 20,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 20,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 21,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 21,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 21,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 24,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 24,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 24,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 2,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 2,
+     "attempt": 2,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    },
+    {
+     "seed": 30,
+     "round": 3,
+     "attempt": 1,
+     "outcome": "parse",
+     "finish_reason": "stop",
+     "reason": "nothing may appear outside the single ```json fence"
+    }
+   ]
+  }
+ },
+ "spend": {
+  "entries": 5,
+  "aborted": 0,
+  "prompt_tokens": 429739,
+  "completion_tokens": 180039,
+  "usd": 5.3197360000000025
+ },
+ "study_meta": {
+  "git_commit": "0b8d55dce60f25253d30a33850fd5063e7c8f1ff",
+  "config": {
+   "seeds": "15,20,21,24,30",
+   "production": true,
+   "backend": "openrouter",
+   "model": "anthropic/claude-opus-5.5",
+   "reasoning_tokens": 16000,
+   "max_output_tokens": 24000,
+   "k": 6,
+   "hidden": 16,
+   "n_initial": 32,
+   "rounds": 3,
+   "n_candidates": 32,
+   "n_heldout": 500,
+   "n_long": 200,
+   "train_steps": 2000,
+   "per_round": 24,
+   "distinct": 48,
+   "max_norm": 1.0,
+   "spend_cap_usd": 50.0
+  },
+  "written": "2026-11-05T06:41:17.414905+00:00",
+  "resumes": []
+ }
+}

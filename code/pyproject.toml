@@ -1,0 +1,13 @@
+[project]
+name = "wsp-harness"
+version = "0.0.1"
+description = "Counterexample-guided weight-space repair without gradients: pilot harness"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "python-sat>=1.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+llm = ["anthropic>=0.40"]
+
+[tool.pytest.ini_options]
+testpaths = ["wsp"]

@@ -1,0 +1,33 @@
+{
+ "git_commit": "144406f95715752cdbef91bc6f7fd9ffb13e4909",
+ "config": {
+  "seeds": "1,15,20,21,24",
+  "production": false,
+  "backend": "openrouter",
+  "model": "openai/gpt-6-astra",
+  "reasoning_tokens": 16000,
+  "max_output_tokens": 24000,
+  "k": 6,
+  "hidden": 16,
+  "n_initial": 32,
+  "rounds": 3,
+  "n_candidates": 32,
+  "n_heldout": 500,
+  "n_long": 200,
+  "train_steps": 2000,
+  "fence": "relaxed",
+  "per_round": 24,
+  "distinct": 48,
+  "max_norm": 1.0,
+  "spend_cap_usd": 18.0
+ },
+ "written": "2026-11-05T09:09:01.093396+00:00",
+ "resumes": [
+  {
+   "time": "2026-11-05T11:15:10.879400+00:00",
+   "git_commit": "d76c38ea39d0eedc59a68614d0f0bd2b1fca1c6f",
+   "seeds": "1,15,20,21,24",
+   "spend_cap_usd": 25.0
+  }
+ ]
+}

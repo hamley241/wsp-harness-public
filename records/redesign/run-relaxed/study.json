@@ -1,0 +1,937 @@
+{
+ "outcome": {
+  "f": 0.0224,
+  "n_seeds": 5,
+  "min_analyzable": 4,
+  "n_analyzable": 5,
+  "failed": [],
+  "seeds": [
+   {
+    "seed": 1,
+    "status": "ok",
+    "D0": 0.692,
+    "E1": 0.688,
+    "E2": 0.688,
+    "G": 0.72,
+    "N": 0.692,
+    "gE": -0.0040000000000000036,
+    "gG": 0.028000000000000025,
+    "d": -0.03200000000000003
+   },
+   {
+    "seed": 15,
+    "status": "ok",
+    "D0": 0.738,
+    "E1": 0.8,
+    "E2": 0.814,
+    "G": 0.856,
+    "N": 0.738,
+    "gE": 0.06899999999999995,
+    "gG": 0.118,
+    "d": -0.049000000000000044
+   },
+   {
+    "seed": 20,
+    "status": "ok",
+    "D0": 0.75,
+    "E1": 0.756,
+    "E2": 0.756,
+    "G": 0.784,
+    "N": 0.75,
+    "gE": 0.006000000000000005,
+    "gG": 0.03400000000000003,
+    "d": -0.028000000000000025
+   },
+   {
+    "seed": 21,
+    "status": "ok",
+    "D0": 0.728,
+    "E1": 0.728,
+    "E2": 0.728,
+    "G": 0.78,
+    "N": 0.728,
+    "gE": 0.0,
+    "gG": 0.052000000000000046,
+    "d": -0.052000000000000046
+   },
+   {
+    "seed": 24,
+    "status": "ok",
+    "D0": 0.722,
+    "E1": 0.734,
+    "E2": 0.734,
+    "G": 0.766,
+    "N": 0.722,
+    "gE": 0.01200000000000001,
+    "gG": 0.04400000000000004,
+    "d": -0.03200000000000003
+   }
+  ],
+  "counts": {
+   "gE_at_most_f": 4,
+   "d_above_f": 0,
+   "d_below_minus_f": 5,
+   "abs_d_at_most_f": 0
+  },
+  "outcome": "no_repair"
+ },
+ "seeds": [
+  {
+   "seed": 1,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 15,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 20,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 21,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  },
+  {
+   "seed": 24,
+   "status": "ok",
+   "failure": null,
+   "n_rounds": 3,
+   "rounds_completed": {
+    "E1": 3,
+    "E2": 3,
+    "G": 3,
+    "N": 3
+   }
+  }
+ ],
+ "rounds": [
+  {
+   "seed": 1,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 1,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 40
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 1,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 15,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 1,
+     "c": 0
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 3,
+    "E2": 6,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 2,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 15,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 1,
+     "c": 0
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 5,
+    "E2": 11,
+    "G": 37
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 3,
+    "E1_E2": 4
+   }
+  },
+  {
+   "seed": 15,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 6,
+    "E2": 12,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 2,
+    "E2_G": 6,
+    "E1_E2": 4
+   }
+  },
+  {
+   "seed": 20,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 0,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 20,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 39
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 20,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 21,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 21,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 34
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 21,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "E2": {
+     "Wx": 0,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 1
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 1,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 1,
+    "E2_G": 1,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 24,
+   "round": 1,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 24
+   },
+   "overlap": {
+    "E1_G": 0,
+    "E2_G": 0,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 24,
+   "round": 2,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 36
+   },
+   "overlap": {
+    "E1_G": 0,
+    "E2_G": 0,
+    "E1_E2": 1
+   }
+  },
+  {
+   "seed": 24,
+   "round": 3,
+   "status": "ok",
+   "available": {
+    "E1": true,
+    "E2": true,
+    "G": true
+   },
+   "blocks": {
+    "E1": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "E2": {
+     "Wx": 1,
+     "Wh": 0,
+     "bh": 0,
+     "w": 0,
+     "c": 0
+    },
+    "G": {
+     "Wx": 1,
+     "Wh": 1,
+     "bh": 0,
+     "w": 1,
+     "c": 1
+    }
+   },
+   "n_touched": {
+    "E1": 1,
+    "E2": 1,
+    "G": 48
+   },
+   "overlap": {
+    "E1_G": 0,
+    "E2_G": 0,
+    "E1_E2": 1
+   }
+  }
+ ],
+ "blocks_touched": {
+  "E1": {
+   "1": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 0,
+    "c": 3
+   },
+   "2": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 1,
+    "bh": 0,
+    "w": 0,
+    "c": 3
+   },
+   "3": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 1,
+    "bh": 1,
+    "w": 0,
+    "c": 3
+   }
+  },
+  "E2": {
+   "1": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 1,
+    "c": 3
+   },
+   "2": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 1,
+    "c": 3
+   },
+   "3": {
+    "n_available": 5,
+    "Wx": 2,
+    "Wh": 0,
+    "bh": 0,
+    "w": 1,
+    "c": 4
+   }
+  },
+  "G": {
+   "1": {
+    "n_available": 5,
+    "Wx": 4,
+    "Wh": 5,
+    "bh": 1,
+    "w": 5,
+    "c": 5
+   },
+   "2": {
+    "n_available": 5,
+    "Wx": 5,
+    "Wh": 5,
+    "bh": 1,
+    "w": 5,
+    "c": 5
+   },
+   "3": {
+    "n_available": 5,
+    "Wx": 5,
+    "Wh": 5,
+    "bh": 2,
+    "w": 5,
+    "c": 5
+   }
+  }
+ },
+ "editor": {
+  "E1": {
+   "rounds": 15,
+   "noop_rounds": 0,
+   "readout_only_rounds": 6,
+   "attempts": 15,
+   "ok": 15,
+   "refusal": 0,
+   "llm_error": 0,
+   "client_error": 0,
+   "parse": 0,
+   "budget": 0,
+   "failures": []
+  },
+  "E2": {
+   "rounds": 15,
+   "noop_rounds": 0,
+   "readout_only_rounds": 7,
+   "attempts": 16,
+   "ok": 15,
+   "refusal": 0,
+   "llm_error": 1,
+   "client_error": 0,
+   "parse": 0,
+   "budget": 0,
+   "failures": [
+    {
+     "seed": 20,
+     "round": 1,
+     "attempt": 1,
+     "outcome": "llm_error",
+     "finish_reason": "length",
+     "reason": "OpenRouter returned no content (finish_reason=length)"
+    }
+   ]
+  }
+ },
+ "spend": {
+  "entries": 5,
+  "aborted": 0,
+  "prompt_tokens": 207433,
+  "completion_tokens": 88461,
+  "usd": 2.5989519999999993
+ },
+ "study_meta": {
+  "git_commit": "41f43a1d3fb00ec7d3bfd5e93891e36a04b2a423",
+  "config": {
+   "seeds": "1,15,20,21,24",
+   "production": false,
+   "backend": "openrouter",
+   "model": "anthropic/claude-opus-5.5",
+   "reasoning_tokens": 16000,
+   "max_output_tokens": 24000,
+   "k": 6,
+   "hidden": 16,
+   "n_initial": 32,
+   "rounds": 3,
+   "n_candidates": 32,
+   "n_heldout": 500,
+   "n_long": 200,
+   "train_steps": 2000,
+   "fence": "relaxed",
+   "per_round": 24,
+   "distinct": 48,
+   "max_norm": 1.0,
+   "spend_cap_usd": 10.0
+  },
+  "written": "2026-11-05T08:28:14.367022+00:00",
+  "resumes": []
+ }
+}

@@ -1,0 +1,4 @@
+started 2026-11-05T09:09:00Z commit 144406f run A gpt-6-astra per rules/second-model-rule.md cap 18
+exit 0
+11:15:02Z: $18 runner stopped at the seed boundary after seed 21
+relaunch 11:15:10Z cap 25 (Amendment 1)

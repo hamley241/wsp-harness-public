@@ -1,0 +1,555 @@
+{
+ "seed": 20,
+ "k": 6,
+ "phases": "default",
+ "n_initial": 32,
+ "rounds": 3,
+ "n_candidates": 32,
+ "arms": {
+  "A": {
+   "name": "A",
+   "final_status": "unique",
+   "event_time": 32,
+   "event_set": [
+    32
+   ],
+   "ledger_total": 32,
+   "failure": null,
+   "rounds": [
+    {
+     "round": 1,
+     "attempts": 1,
+     "n_refusals": 0,
+     "n_errors": 0,
+     "fallback_random": false,
+     "n_filled_random": 0,
+     "standin_status": "sat",
+     "standin_timeout": false,
+     "standin_predictions": [
+      [
+       "0",
+       1
+      ],
+      [
+       "1",
+       0
+      ],
+      [
+       "00",
+       1
+      ],
+      [
+       "01",
+       0
+      ],
+      [
+       "10",
+       0
+      ],
+      [
+       "11",
+       0
+      ],
+      [
+       "101",
+       1
+      ],
+      [
+       "011",
+       0
+      ],
+      [
+       "100",
+       1
+      ],
+      [
+       "010",
+       0
+      ],
+      [
+       "1101",
+       1
+      ],
+      [
+       "1010",
+       1
+      ],
+      [
+       "0110",
+       0
+      ],
+      [
+       "1001",
+       0
+      ],
+      [
+       "10101",
+       0
+      ],
+      [
+       "01011",
+       0
+      ],
+      [
+       "11011",
+       0
+      ],
+      [
+       "10110",
+       0
+      ],
+      [
+       "01101",
+       1
+      ],
+      [
+       "10010",
+       0
+      ],
+      [
+       "101101",
+       1
+      ],
+      [
+       "011010",
+       1
+      ],
+      [
+       "100101",
+       1
+      ],
+      [
+       "111011",
+       0
+      ],
+      [
+       "010100",
+       1
+      ],
+      [
+       "110110",
+       0
+      ],
+      [
+       "1011010",
+       1
+      ],
+      [
+       "0101101",
+       1
+      ],
+      [
+       "1110110",
+       0
+      ],
+      [
+       "1001011",
+       0
+      ],
+      [
+       "0110101",
+       0
+      ],
+      [
+       "1100100",
+       1
+      ],
+      [
+       "10110101",
+       0
+      ],
+      [
+       "01101100",
+       1
+      ],
+      [
+       "11010110",
+       0
+      ],
+      [
+       "10011010",
+       1
+      ],
+      [
+       "00101101",
+       1
+      ],
+      [
+       "11100111",
+       0
+      ],
+      [
+       "101101101",
+       1
+      ],
+      [
+       "010010110",
+       0
+      ],
+      [
+       "110101010",
+       1
+      ],
+      [
+       "100111001",
+       0
+      ],
+      [
+       "011011011",
+       0
+      ],
+      [
+       "001010100",
+       1
+      ],
+      [
+       "1011010110",
+       0
+      ],
+      [
+       "0101101101",
+       1
+      ],
+      [
+       "1101001010",
+       1
+      ],
+      [
+       "1001101001",
+       0
+      ],
+      [
+       "0110110110",
+       0
+      ],
+      [
+       "1110001011",
+       0
+      ],
+      [
+       "10110101101",
+       1
+      ],
+      [
+       "01011011010",
+       1
+      ],
+      [
+       "11011010100",
+       1
+      ],
+      [
+       "10010110101",
+       0
+      ],
+      [
+       "00110110111",
+       0
+      ],
+      [
+       "11101010010",
+       0
+      ],
+      [
+       "101101011010",
+       1
+      ],
+      [
+       "010110110101",
+       0
+      ],
+      [
+       "110110101001",
+       0
+      ],
+      [
+       "100101101011",
+       0
+      ],
+      [
+       "011010010110",
+       0
+      ],
+      [
+       "111010110100",
+       1
+      ]
+     ],
+     "n_counterexamples": 6,
+     "queried": [
+      "0",
+      "1",
+      "01",
+      "11",
+      "010",
+      "110",
+      "0110",
+      "1101",
+      "10110",
+      "10010",
+      "11010",
+      "110110",
+      "010010",
+      "011101",
+      "0110110",
+      "1110110",
+      "0110101",
+      "11010110",
+      "10110110",
+      "01110101",
+      "010010110",
+      "011011010",
+      "100111101",
+      "0110110110",
+      "1001101010",
+      "1110010101",
+      "10010110110",
+      "00110110110",
+      "11101011101",
+      "010110110110",
+      "110110101010",
+      "011010010101"
+     ],
+     "labels": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "ledger_total": 32,
+     "sat": {
+      "status": "sat",
+      "n_states_found": 6,
+      "ambiguity": "unique",
+      "dfa": {
+       "n_states": 6,
+       "delta": [
+        [
+         0,
+         2
+        ],
+        [
+         4,
+         5
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "accepting": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+       ],
+       "start": 0
+      },
+      "elapsed_s": 0.37085487495642155
+     }
+    }
+   ],
+   "calls": [
+    {
+     "role": "generator",
+     "system_sha256": "022aee9b93a7fe3f53706ef79011e58a5742971768a12406f82762fbb01177a8",
+     "user": "### Initial labeled dataset (string<TAB>label; 1 = accept)\n0\t1\n1\t0\n00\t1\n10\t0\n000\t1\n001\t0\n0101\t1\n0011\t0\n11101\t1\n00100\t1\n00001\t0\n111100\t1\n100001\t0\n110011\t0\n0011101\t1\n0010000\t1\n0010101\t0\n00000000\t1\n11010011\t0\n00100011\t0\n110100000\t1\n001100101\t1\n001000001\t0\n0011001100\t1\n0010001111\t0\n0000111011\t0\n00110010100\t1\n00100000100\t1\n11010101011\t0\n001011100101\t1\n101010010010\t0\n100001110001\t0\n\n### Current discriminator predictions on your probes (string<TAB>prediction)\n(none yet)\n\n### Required number of strings per length\n- length 1: 4\n- length 2: 4\n- length 3: 4\n- length 4: 4\n- length 5: 6\n- length 6: 6\n- length 7: 6\n- length 8: 6\n- length 9: 6\n- length 10: 6\n- length 11: 6\n- length 12: 6\n\nReturn exactly 64 binary strings, exactly the counts above per length, no duplicates,\none per line inside a ```strings fence.\n",
+     "response": "Length 1 has only two possible strings (\"0\" and \"1\"), so it cannot have 4 unique entries. I listed those two, which brings the total to 62 instead of 64. All other lengths match the required counts with no duplicates.\n\nTo pick the probes, I worked out a guessed 3-state machine that matches all 32 labeled examples:\n- **State A (start, accept):** a 0 stays in A; a 1 goes to B.\n- **State B (reject):** a 1 stays in B; a 0 goes to C.\n- **State C (reject):** either symbol returns to A.\n\nThe probes focus on patterns this structure makes hard to learn:\n- **1s eaten after \"10\":** strings where a 1 right after \"10\" returns to accept, so the string ends in 1 but is accepted.\n- **Strings ending in \"10\":** these are rejected even though they end in 0.\n- **Long alternating mixes:** longer strings that switch between the three states many times.\n\n```strings\n0\n1\n00\n01\n10\n11\n101\n011\n100\n010\n1101\n1010\n0110\n1001\n10101\n01011\n11011\n10110\n01101\n10010\n101101\n011010\n100101\n111011\n010100\n110110\n1011010\n0101101\n1110110\n1001011\n0110101\n1100100\n10110101\n01101100\n11010110\n10011010\n00101101\n11100111\n101101101\n010010110\n110101010\n100111001\n011011011\n001010100\n1011010110\n0101101101\n1101001010\n1001101001\n0110110110\n1110001011\n10110101101\n01011011010\n11011010100\n10010110101\n00110110111\n11101010010\n101101011010\n010110110101\n110110101001\n100101101011\n011010010110\n111010110100\n```",
+     "finish_reason": null,
+     "error": null,
+     "elapsed_s": 46.19106070906855
+    },
+    {
+     "role": "generator",
+     "system_sha256": "022aee9b93a7fe3f53706ef79011e58a5742971768a12406f82762fbb01177a8",
+     "user": "### Initial labeled dataset (string<TAB>label; 1 = accept)\n0\t1\n1\t0\n00\t1\n10\t0\n000\t1\n001\t0\n0101\t1\n0011\t0\n11101\t1\n00100\t1\n00001\t0\n111100\t1\n100001\t0\n110011\t0\n0011101\t1\n0010000\t1\n0010101\t0\n00000000\t1\n11010011\t0\n00100011\t0\n110100000\t1\n001100101\t1\n001000001\t0\n0011001100\t1\n0010001111\t0\n0000111011\t0\n00110010100\t1\n00100000100\t1\n11010101011\t0\n001011100101\t1\n101010010010\t0\n100001110001\t0\n\n### Current discriminator predictions on your probes (string<TAB>prediction)\n0\t1\n1\t0\n00\t1\n01\t0\n10\t0\n11\t0\n101\t1\n011\t0\n100\t1\n010\t0\n1101\t1\n1010\t1\n0110\t0\n1001\t0\n10101\t0\n01011\t0\n11011\t0\n10110\t0\n01101\t1\n10010\t0\n101101\t1\n011010\t1\n100101\t1\n111011\t0\n010100\t1\n110110\t0\n1011010\t1\n0101101\t1\n1110110\t0\n1001011\t0\n0110101\t0\n1100100\t1\n10110101\t0\n01101100\t1\n11010110\t0\n10011010\t1\n00101101\t1\n11100111\t0\n101101101\t1\n010010110\t0\n110101010\t1\n100111001\t0\n011011011\t0\n001010100\t1\n1011010110\t0\n0101101101\t1\n1101001010\t1\n1001101001\t0\n0110110110\t0\n1110001011\t0\n10110101101\t1\n01011011010\t1\n11011010100\t1\n10010110101\t0\n00110110111\t0\n11101010010\t0\n101101011010\t1\n010110110101\t0\n110110101001\t0\n100101101011\t0\n011010010110\t0\n111010110100\t1\n\n### Required number of strings per length\n- length 1: 2\n- length 2: 2\n- length 3: 2\n- length 4: 2\n- length 5: 3\n- length 6: 3\n- length 7: 3\n- length 8: 3\n- length 9: 3\n- length 10: 3\n- length 11: 3\n- length 12: 3\n\nReturn exactly 32 binary strings, exactly the counts above per length, no duplicates,\none per line inside a ```strings fence.\n",
+     "response": "```strings\n0\n1\n01\n11\n010\n110\n0110\n1101\n10110\n10010\n11010\n110110\n010010\n011101\n0110110\n1110110\n0110101\n11010110\n10110110\n01110101\n010010110\n011011010\n100111101\n0110110110\n1001101010\n1110010101\n10010110110\n00110110110\n11101011101\n010110110110\n110110101010\n011010010101\n```",
+     "finish_reason": null,
+     "error": null,
+     "elapsed_s": 15.397097833105363
+    }
+   ]
+  },
+  "B": {
+   "name": "B",
+   "final_status": "unique",
+   "event_time": 32,
+   "event_set": [
+    32
+   ],
+   "ledger_total": 32,
+   "failure": null,
+   "rounds": [
+    {
+     "round": 1,
+     "attempts": 1,
+     "n_refusals": 0,
+     "n_errors": 0,
+     "fallback_random": false,
+     "n_filled_random": 0,
+     "queried": [
+      "0",
+      "1",
+      "00",
+      "01",
+      "010",
+      "000",
+      "1101",
+      "0110",
+      "00100",
+      "00110",
+      "01000",
+      "101000",
+      "111100",
+      "111001",
+      "1101001",
+      "0110101",
+      "0110011",
+      "10100010",
+      "10101011",
+      "10101000",
+      "110110101",
+      "001011110",
+      "111110111",
+      "1100111101",
+      "0010100110",
+      "0110100110",
+      "01111100001",
+      "00010001111",
+      "01100111010",
+      "001100000110",
+      "001010101110",
+      "011000010111"
+     ],
+     "labels": [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "ledger_total": 32,
+     "sat": {
+      "status": "sat",
+      "n_states_found": 6,
+      "ambiguity": "unique",
+      "dfa": {
+       "n_states": 6,
+       "delta": [
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         5
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         0,
+         3
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "accepting": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+       ],
+       "start": 0
+      },
+      "elapsed_s": 0.3577519169775769
+     }
+    }
+   ],
+   "calls": []
+  }
+ },
+ "usage": {
+  "prompt_tokens": 1416,
+  "completion_tokens": 6141,
+  "usd": 0.12848399999999993
+ }
+}

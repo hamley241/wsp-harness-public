@@ -1,0 +1,20 @@
+{
+ "git_commit": "b8f63d823f0badf0199a44b8195063bbe34fc88e",
+ "python_sat_version": "1.9.dev20",
+ "config": {
+  "roster": "sensitivity-inverted",
+  "n_main": 20,
+  "n_ext": 10,
+  "k": 6,
+  "n_initial": 32,
+  "rounds": 3,
+  "n_candidates": 32,
+  "backend": "openrouter",
+  "model": "anthropic/claude-opus-5.5",
+  "reasoning_tokens": 16000,
+  "max_output_tokens": 32000,
+  "sat_timeout": 30.0,
+  "spend_cap_usd": 10.0
+ },
+ "written": "2026-11-05T04:58:20.592849+00:00"
+}

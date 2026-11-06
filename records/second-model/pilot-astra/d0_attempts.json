@@ -1,0 +1,20 @@
+[
+ {
+  "attempt": 1,
+  "src_lines": 305,
+  "literal_matches": 32,
+  "finish_reason": null,
+  "outcome": "audit",
+  "reason": "line cap exceeded: 305 > 300",
+  "elapsed_s": 168.39355429203715
+ },
+ {
+  "attempt": 2,
+  "src_lines": 182,
+  "literal_matches": 32,
+  "finish_reason": null,
+  "outcome": "ok",
+  "reason": "",
+  "elapsed_s": 186.96594687493052
+ }
+]

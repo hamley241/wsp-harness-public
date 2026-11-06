@@ -1,0 +1,38 @@
+{
+ "pilot_dir": "records/pilot/run",
+ "k": 6,
+ "phases": "default",
+ "timeout_s": 30,
+ "rounds": [
+  {
+   "round": 1,
+   "n_probes": 62,
+   "n_determined": 60,
+   "agree_determined": 60,
+   "agree_undetermined": 2,
+   "n_determination_timeouts": 0,
+   "standin_status": "sat"
+  },
+  {
+   "round": 2,
+   "n_probes": 62,
+   "n_determined": 62,
+   "agree_determined": 62,
+   "agree_undetermined": 0,
+   "n_determination_timeouts": 0,
+   "standin_status": "sat"
+  },
+  {
+   "round": 3,
+   "n_probes": 62,
+   "n_determined": 62,
+   "agree_determined": 62,
+   "agree_undetermined": 0,
+   "n_determination_timeouts": 0,
+   "standin_status": "sat"
+  }
+ ],
+ "n_determined": 184,
+ "pass": true,
+ "vacuous": false
+}
