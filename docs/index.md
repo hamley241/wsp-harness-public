@@ -7,10 +7,18 @@ title: Can a language model repair a network's weights by reading them?
 
 A trained neural network is a list of numbers. Language models read and write text, and numbers are text. So it is tempting to hand a model a small network's weights and its mistakes and ask it to fix the numbers directly, the way one patches code. We tested this under controlled conditions, with every decision rule written down before the first model call. Two findings matter.
 
-1. **Accuracy after an edit can be real and still not be repair.** Given a free hand, two different models took a failing network to perfect accuracy. Reading their work showed how: they inferred the hidden rule from the labelled examples and wrote a brand-new network that encoded it. The supplied network was replaced, not fixed.
+1. **Accuracy after an edit can be real and still not be repair.** Given a free hand, two different models took a failing network to perfect accuracy. Reading their work showed how: they solved the problem itself, inferring the hidden rule from the labelled examples, and then filled in weights that encode the answer. The supplied network was replaced, not fixed.
 2. **Held to small numeric edits, neither model repaired the network.** Under a budget that rules out rewriting, both models stayed within the pre-registered threshold on four of five seeds, while ordinary gradient descent, given exactly the same examples and budget, improved every seed.
 
 Paper: [extended abstract (PDF)](https://github.com/hamley241/wsp-harness-public/blob/main/paper/main.pdf). Code, frozen rules and complete records: [the repository](https://github.com/hamley241/wsp-harness-public). Everything below can be recomputed offline from those records.
+
+## What the models actually did
+
+![Repair as asked for, versus the reconstruction route both models took](assets/fig0-reconstruction.png)
+
+This is the part worth remembering. We asked for a repair: read the trained weights, find what is wrong, change a few numbers. What both models did instead was solve the underlying problem and then fill in weights. Their programs embedded the labelled strings literally, searched for the smallest automaton consistent with them, and wrote a fresh network that encodes that automaton in saturated weights. A SAT solver run offline confirms the timing: accuracy hits 1.000 in exactly the round in which the examples first identify the automaton uniquely, for both models and both query strategies. Before that round the models are at or near the accuracy of the best guess from the examples alone.
+
+That is a real capability, and in a small setting an impressive one: the model is an inductive reasoner that can also hand-write a network. But it means a perfect score told us nothing about whether the model understood the network it was given. The supplied weights were overwritten, not read. Any evaluation of weight editing that scores accuracy alone cannot tell these two routes apart.
 
 ## The setting
 
