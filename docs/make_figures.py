@@ -78,7 +78,7 @@ for opt, lab, mk in [("rs-random24", "sparse random search (24/48/1.0 budget)", 
     bs = sorted({c["budget"] for c in cells.values() if c["optimiser"] == opt})
     ys = [sum(1 for v in cells[f"{opt}/B{b}"]["per_seed"].values() if v.get("repaired")) for b in bs]
     ax.plot(bs, ys, marker=mk, label=lab)
-ax.set_xscale("log"); ax.set_xlabel("objective evaluations per round"); ax.set_ylabel("seeds repaired (of 4)"); ax.set_yticks(range(5)); ax.set_ylim(-0.2, 4.3)
+ax.set_xscale("log"); ax.set_xlabel("objective-evaluation budget per round"); ax.set_ylabel("seeds repaired (of 4)"); ax.set_yticks(range(5)); ax.set_ylim(-0.2, 4.3)
 ax.axhline(3, color="k", ls="--", lw=0.8); ax.text(9000, 3.1, "criterion: 3 of 4", fontsize=8, ha="right")
 ax.set_title("Follow-up: forward-pass-only search on four development seeds"); ax.legend(fontsize=8, loc="upper left")
 fig.tight_layout(); fig.savefig(OUT + "fig3-search.png", dpi=160); plt.close(fig)
