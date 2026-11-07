@@ -15,7 +15,8 @@ def last_round(arm):
 def seed_row_from_record(path):
     d = json.load(open(path)); a = d["arms"]
     n = last_round(a["N"]); e = (last_round(a["E1"]) + last_round(a["E2"])) / 2; g = last_round(a["G"])
-    return {"seed": d["seed"], "D0": d["D0"], "gE": e - n, "gG": g - n}
+    d0 = d["D0"]["heldout"] if isinstance(d["D0"], dict) else d["D0"]
+    return {"seed": d["seed"], "D0": d0, "gE": e - n, "gG": g - n}
 
 def per_seed(path):
     d = json.load(open(path)); return {s["seed"]: s for s in d["outcome"]["seeds"] if s.get("status") == "ok"}
@@ -31,10 +32,10 @@ ax.text(0.2, 4.25, "What we asked for: repair", fontsize=12, fontweight="bold", 
 box(0.2, 2.9, 2.6, 0.9, "trained network\n(321 weights) + its mistakes", "#dbe5f3"); box(3.8, 2.9, 2.4, 0.9, "read the weights,\nfind the fault", "#dbe5f3"); box(7.2, 2.9, 2.6, 0.9, "patch a few numbers:\nthe same network, fixed", "#dbe5f3")
 arrow(2.85, 3.35, 3.75, 3.35); arrow(6.25, 3.35, 7.15, 3.35)
 ax.text(0.2, 2.25, "What both models did on the tested seed: reconstruction", fontsize=12, fontweight="bold", color="#C44E52")
-box(0.2, 0.8, 2.6, 0.9, "the labelled examples\n(32 to 40 strings, embedded literally)", "#f6dcdc", fs=9.5); box(3.8, 0.8, 2.4, 0.9, "the written program searches for\nthe smallest consistent automaton", "#f6dcdc", fs=9.5); box(7.2, 0.8, 2.6, 0.9, "and writes a brand-new network\nthat encodes it", "#f6dcdc", fs=9.5)
+box(0.2, 0.8, 2.6, 0.9, "the labelled examples, embedded literally\n(32 to 37 strings for Opus, 32 to 40 for astra)", "#f6dcdc", fs=9); box(3.8, 0.8, 2.4, 0.9, "the written program searches for\nthe smallest consistent automaton", "#f6dcdc", fs=9.5); box(7.2, 0.8, 2.6, 0.9, "and writes a brand-new network\nthat encodes it", "#f6dcdc", fs=9.5)
 arrow(2.85, 1.25, 3.75, 1.25); arrow(6.25, 1.25, 7.15, 1.25)
 ax.text(5, 0.25, "Accuracy reaches 1.000 in exactly the round in which the queried labels first identify the automaton (offline SAT check).", ha="center", fontsize=9.5, style="italic")
-ax.text(5, -0.05, "The supplied weights were overwritten, not patched. Same accuracy, different question answered.", ha="center", fontsize=9.5, style="italic")
+ax.text(5, -0.05, "The programs returned complete replacement weight arrays and took no supplied weights as input. Same accuracy, different procedure evaluated.", ha="center", fontsize=9.5, style="italic")
 fig.tight_layout(); fig.savefig(OUT + "fig0-reconstruction.png", dpi=160, bbox_inches="tight"); plt.close(fig)
 
 # Figure 1: construction pilot
