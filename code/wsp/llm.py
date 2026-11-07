@@ -112,7 +112,7 @@ class OpenRouterClient:
         if self.reasoning_max_tokens:
             payload["reasoning"] = {"max_tokens": self.reasoning_max_tokens}
         headers = {"Authorization": f"Bearer {self._key}", "Content-Type": "application/json",
-                   "HTTP-Referer": "https://github.com/REPLACE-WITH-PUBLIC-REPO", "X-Title": "wsp-harness"}
+                   "HTTP-Referer": "https://github.com/hamley241/wsp-harness-public", "X-Title": "wsp-harness"}
         body = json.dumps(payload).encode()
         for attempt in range(len(_RETRY_BACKOFF_S) + 1):
             try:

@@ -2,6 +2,13 @@
 
 Code, frozen rules and complete run records for the extended abstract of the same title (`paper/`). Everything needed to recompute every number in the paper is here; nothing was re-run for release.
 
+## Status and provenance (2026-11-07)
+
+- Claim. Improved accuracy after a language-model weight edit does not establish repair. In the unconstrained constructor pilot (`records/pilot/`, `records/second-model/pilot-astra/`), two editor models reached the task's ceiling by inferring the hidden automaton from the labelled examples and writing a replacement network; under a bounded numeric-edit budget (`records/redesign/`, `records/second-model/repair-astra/`), neither model repaired the trained network beyond the pre-registered threshold while projected gradient descent did on every seed. The extended abstract in `paper/` states the result and its limits (one task, one architecture, five seeds, two models).
+- Dates. The constructor pilot was run on 2026-11-04, the constrained editing study on 2026-11-04 and 2026-11-05, and the second-model replication on 2026-11-05; every record carries its own launch log and spend ledger with timestamps. This export was assembled on 2026-11-06 from the working repository without re-running anything.
+- Rules first. Each experiment's decision rule in `rules/` was frozen before that experiment's first model call; amendments are dated and appended, never edited in place.
+- Follow-up in progress. A controlled re-evaluation of a published one-shot weight-repair demonstration on a different task is in preparation. It is a design, not a result, until its model arms have run; nothing from it is claimed here.
+
 ## Layout
 
 - `paper/` — the extended abstract (LaTeX, ICLR 2027 workshop style) and its bibliography.

@@ -154,7 +154,7 @@ def test_openrouter_request_response_and_usage():
     (url, headers, body), = seen
     assert url == "https://openrouter.ai/api/v1/chat/completions"
     assert headers["Authorization"] == f"Bearer {KEY}" and headers["Content-Type"] == "application/json"
-    assert headers["HTTP-Referer"] == "https://github.com/REPLACE-WITH-PUBLIC-REPO" and headers["X-Title"] == "wsp-harness"
+    assert headers["HTTP-Referer"] == "https://github.com/hamley241/wsp-harness-public" and headers["X-Title"] == "wsp-harness"
     assert body["model"] == "anthropic/claude-fable-5.1" and body["max_tokens"] == 20000
     assert body["messages"] == [{"role": "system", "content": "sys"}, {"role": "user", "content": "usr"}]
     assert body["reasoning"] == {"max_tokens": 16000}
