@@ -31,7 +31,7 @@ def arrow(x1, y1, x2, y2):
 ax.text(0.2, 4.25, "What we asked for: repair", fontsize=12, fontweight="bold", color="#4C72B0")
 box(0.2, 2.9, 2.6, 0.9, "trained network\n(321 weights) + its mistakes", "#dbe5f3"); box(3.8, 2.9, 2.4, 0.9, "read the weights,\nfind the fault", "#dbe5f3"); box(7.2, 2.9, 2.6, 0.9, "patch a few numbers:\nthe same network, fixed", "#dbe5f3")
 arrow(2.85, 3.35, 3.75, 3.35); arrow(6.25, 3.35, 7.15, 3.35)
-ax.text(0.2, 2.25, "What both models did on the tested seed: reconstruction", fontsize=12, fontweight="bold", color="#C44E52")
+ax.text(0.2, 2.25, "What the saved constructor programs did on the tested seed: reconstruction", fontsize=12, fontweight="bold", color="#C44E52")
 box(0.2, 0.8, 2.6, 0.9, "the labelled examples,\nembedded literally (32 to 37 strings\nfor Opus, 32 to 40 for astra)", "#f6dcdc", fs=9); box(3.8, 0.8, 2.4, 0.9, "the written program\nsearches for the smallest\nconsistent automaton", "#f6dcdc", fs=9.5); box(7.2, 0.8, 2.6, 0.9, "and writes a brand-new\nnetwork that encodes it", "#f6dcdc", fs=9.5)
 arrow(2.85, 1.25, 3.75, 1.25); arrow(6.25, 1.25, 7.15, 1.25)
 ax.text(5, 0.25, "Accuracy reaches 1.000 in exactly the round in which the queried labels first identify the automaton (offline SAT check).", ha="center", fontsize=9.5, style="italic")
