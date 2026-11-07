@@ -32,10 +32,10 @@ ax.text(0.2, 4.25, "What we asked for: repair", fontsize=12, fontweight="bold", 
 box(0.2, 2.9, 2.6, 0.9, "trained network\n(321 weights) + its mistakes", "#dbe5f3"); box(3.8, 2.9, 2.4, 0.9, "read the weights,\nfind the fault", "#dbe5f3"); box(7.2, 2.9, 2.6, 0.9, "patch a few numbers:\nthe same network, fixed", "#dbe5f3")
 arrow(2.85, 3.35, 3.75, 3.35); arrow(6.25, 3.35, 7.15, 3.35)
 ax.text(0.2, 2.25, "What both models did on the tested seed: reconstruction", fontsize=12, fontweight="bold", color="#C44E52")
-box(0.2, 0.8, 2.6, 0.9, "the labelled examples, embedded literally\n(32 to 37 strings for Opus, 32 to 40 for astra)", "#f6dcdc", fs=9); box(3.8, 0.8, 2.4, 0.9, "the written program searches for\nthe smallest consistent automaton", "#f6dcdc", fs=9.5); box(7.2, 0.8, 2.6, 0.9, "and writes a brand-new network\nthat encodes it", "#f6dcdc", fs=9.5)
+box(0.2, 0.8, 2.6, 0.9, "the labelled examples,\nembedded literally (32 to 37 strings\nfor Opus, 32 to 40 for astra)", "#f6dcdc", fs=9); box(3.8, 0.8, 2.4, 0.9, "the written program\nsearches for the smallest\nconsistent automaton", "#f6dcdc", fs=9.5); box(7.2, 0.8, 2.6, 0.9, "and writes a brand-new\nnetwork that encodes it", "#f6dcdc", fs=9.5)
 arrow(2.85, 1.25, 3.75, 1.25); arrow(6.25, 1.25, 7.15, 1.25)
 ax.text(5, 0.25, "Accuracy reaches 1.000 in exactly the round in which the queried labels first identify the automaton (offline SAT check).", ha="center", fontsize=9.5, style="italic")
-ax.text(5, -0.05, "The programs returned complete replacement weight arrays and took no supplied weights as input. Same accuracy, different procedure evaluated.", ha="center", fontsize=9.5, style="italic")
+ax.text(5, -0.05, "The programs returned complete replacement weight arrays and took no supplied weights as input.\nSame accuracy, different procedure evaluated.", ha="center", va="top", fontsize=9.5, style="italic")
 fig.tight_layout(); fig.savefig(OUT + "fig0-reconstruction.png", dpi=160, bbox_inches="tight"); plt.close(fig)
 
 # Figure 1: construction pilot
@@ -47,9 +47,13 @@ for ax, (f, title) in zip(axes, [(R + "pilot/run/results.json", "Claude Opus 5.5
         ax.plot(x, y, marker=mk, label=lab)
         for r in rs:
             if (r.get("sat") or {}).get("ambiguity") == "unique":
-                ax.annotate("queried labels first\nidentify the automaton", (r["round"], r["heldout"]), textcoords="offset points", xytext=(0, -34), ha="center", fontsize=8, arrowprops=dict(arrowstyle="-", lw=0.6)); break
+                ax.plot([r["round"]], [r["heldout"]], marker="*", ms=16, mfc="none", mec="k", mew=1.2, ls="none", label="_nolegend_"); break
     ax.set_title(title); ax.set_xlabel("round"); ax.set_xticks(x); ax.set_ylim(0.45, 1.03); ax.axhline(0.5, color="grey", lw=0.6, ls=":")
-axes[0].set_ylabel("held-out accuracy (500 strings)"); axes[0].legend(loc="lower left", fontsize=9)
+axes[0].set_ylabel("held-out accuracy (500 strings)")
+from matplotlib.lines import Line2D
+h, l = axes[0].get_legend_handles_labels()
+h.append(Line2D([], [], marker="*", ms=12, mfc="none", mec="k", mew=1.2, ls="none")); l.append("first round the queried labels identify the automaton")
+axes[0].legend(h, l, loc="lower left", fontsize=8.5)
 fig.suptitle("Experiment 1, unconstrained construction, one seed: accuracy reaches 1.000 in the round the queried labels first identify the automaton", fontsize=10.5)
 fig.tight_layout(); fig.savefig(OUT + "fig1-construction.png", dpi=160); plt.close(fig)
 
